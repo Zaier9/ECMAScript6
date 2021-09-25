@@ -69,3 +69,39 @@ console.log(globalVar);
 // Constante que no cambia su valor
 const a = 'b';
 console.log(a)
+
+
+let name = 'Zaier';
+let age = 31;
+
+//es5
+obj = { name: name, age: age };
+
+//es6
+obj2 = { name, age };
+console.log(obj)
+console.log(obj2)
+
+
+const names = [
+    {name: 'Agus', age: 1},
+    {name: 'Kiara', age: 11}
+]
+
+let listOfNames = names.map(function(item){
+    console.log(item.name);
+})
+
+// Arrow Functions en es6
+let listOfNames2 = names.map(item => console.log(item.age));
+
+const listOfNames3 = (name, age, country) => {
+    ...
+}
+
+const listOfNames4 = name => {
+    ...
+}
+
+//Encontrar el cuadrado
+const square = num => num * num;
