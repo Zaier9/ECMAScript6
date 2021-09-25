@@ -12,7 +12,7 @@ function newFunction2(name='Zaier', age= 31, country='MX'){
 
 newFunction2();
 newFunction2('Ricardo', 23, 'CO');
-
+//===================================================
 let hello = "Hello";
 let world = "World";
 let epicPhrase = hello + ' ' + world;
@@ -20,7 +20,7 @@ console.log(epicPhrase)
 epicPhrase2 = `${hello} ${world}`;
 console.log(epicPhrase2)
 
-
+//===================================================
 //multilinea
 let lorem = 'Esto es una linea \n'
 + 'Es es otra linea.'
@@ -32,6 +32,7 @@ a partir de la version es6`
 console.log(lorem)
 console.log(lorem2)
 
+//===================================================
 //Destructuracion de elementos antes de ec6
 let person = {
     'name': 'Zaier',
@@ -45,7 +46,7 @@ console.log(person.name, person.age)
 let{ name, age, country } = person;
 console.log(name, age, country);
 
-
+//===================================================
 // Spread operator en es6
 let team1 = ['Zaier', 'Oscar', 'Julian']
 let team2 = ['Roxana', 'Kiara', 'Agus']
@@ -70,7 +71,7 @@ console.log(globalVar);
 const a = 'b';
 console.log(a)
 
-
+//===================================================
 let name = 'Zaier';
 let age = 31;
 
@@ -82,7 +83,7 @@ obj2 = { name, age };
 console.log(obj)
 console.log(obj2)
 
-
+//===================================================
 const names = [
     {name: 'Agus', age: 1},
     {name: 'Kiara', age: 11}
@@ -106,6 +107,7 @@ const listOfNames4 = name => {
 //Encontrar el cuadrado
 const square = num => num * num;
 
+//===================================================
 // Promesas, podemos trabajar el asincronismo y vienen a solucionar el problema de los callbacks hell's
 const helloPromise = () => {
     return new Promise((resolve, reject) => {
@@ -120,3 +122,45 @@ const helloPromise = () => {
 helloPromise()
     .then(response => console.log(response))
     .catch(error => console.log(error))
+
+//===================================================
+// Entendiendo las clases
+class calculator {
+    constructor() {
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    sum(valueA, valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(10, 10));
+
+
+// Trabajar con MODULOS
+import { hello } from './src/es6/module';
+
+hello();
+
+
+// YIELD
+function* hellorWorld() {
+    if (true) {
+        yield 'Hello, ';
+    }
+    if (true) {
+        yield 'World';
+    }
+};
+
+const generatorHello = hellorWorld();
+console.log(generatorHello.next().value) //Hello,
+console.log(generatorHello.next().value) //World
+console.log(generatorHello.next().value) //Undefined
+
+
+
