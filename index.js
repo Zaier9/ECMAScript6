@@ -52,3 +52,16 @@ let team2 = ['Roxana', 'Kiara', 'Agus']
 
 let education = ['David', ...team1, ...team2];
 console.log(education)
+
+// El gran cambio sin dudas en la utilizacion de LET en vez de VAR, lo que no da LET es que las variables solo tienen un alcance de bloque y no global como si pasaba con VAR
+
+{
+    var globalVar = "Global Var";
+}
+
+{
+    let globalLet = 'Global Let';
+    console.log(globalLet);
+}
+
+console.log(globalVar);
