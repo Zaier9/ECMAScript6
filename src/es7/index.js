@@ -5,3 +5,10 @@ if (numbers.includes(8)) {
 } else {
     console.log('No encontramos dicho valor');
 }
+
+
+let base = 4;
+let exponent = 4;
+let result = base ** exponent;
+
+console.log(result)
