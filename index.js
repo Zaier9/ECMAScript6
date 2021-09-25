@@ -65,3 +65,7 @@ console.log(education)
 }
 
 console.log(globalVar);
+
+// Constante que no cambia su valor
+const a = 'b';
+console.log(a)
