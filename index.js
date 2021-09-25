@@ -105,3 +105,18 @@ const listOfNames4 = name => {
 
 //Encontrar el cuadrado
 const square = num => num * num;
+
+// Promesas, podemos trabajar el asincronismo y vienen a solucionar el problema de los callbacks hell's
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if (true) {
+            resolve('Hey, todo esta bien')
+        } else {
+            reject('Ups!! Algo salio mal')
+        }
+    });
+}
+
+helloPromise()
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
