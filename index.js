@@ -22,3 +22,33 @@ console.log(epicPhrase2)
 
 
 //multilinea
+let lorem = 'Esto es una linea \n'
++ 'Es es otra linea.'
+
+//multilinea en es6
+let lorem2 = `Asi es como se hace el salto de linea
+a partir de la version es6`
+
+console.log(lorem)
+console.log(lorem2)
+
+//Destructuracion de elementos antes de ec6
+let person = {
+    'name': 'Zaier',
+    'age': 31,
+    'country': 'AR'
+}
+
+console.log(person.name, person.age)
+
+// Destrucuracion en es6
+let{ name, age, country } = person;
+console.log(name, age, country);
+
+
+// Spread operator en es6
+let team1 = ['Zaier', 'Oscar', 'Julian']
+let team2 = ['Roxana', 'Kiara', 'Agus']
+
+let education = ['David', ...team1, ...team2];
+console.log(education)
