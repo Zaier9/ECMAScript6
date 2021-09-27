@@ -24,13 +24,14 @@ Promise.allSettled([promise1, promise2, promise3])
     .then(response => console.log(response));
 
 
-//Global this
+//Global this => globalTHis podemos acceder al objeto window desde el codigo
 console.log(window);
+
 console.log(globalThis);
 
 
 //Nuevo operador logico. NULL (??)
-const food = null || 'default string';
+const food = null ?? 'default string';
 console.log(food);
 
 
